@@ -10,12 +10,14 @@ use serde::{Deserialize, Deserializer, Serialize, Serializer};
 
 /// Declares [`Code`] with its wire strings, so a variant and its string cannot drift apart.
 macro_rules! codes {
-    ($( $(#[$family:meta])* $variant:ident => $text:literal, )+) => {
+    ($( $variant:ident => $text:literal, )+) => {
         /// A refusal code. `Display` prints the `X_` string that goes on the wire.
+        ///
+        /// Not `non_exhaustive`: a crate that matches on codes must fail to compile when a code
+        /// is added, not fall into a catch-all arm.
         #[derive(Clone, Copy, Debug, PartialEq, Eq, Hash, PartialOrd, Ord)]
-        #[non_exhaustive]
         pub enum Code {
-            $( $(#[$family])* #[doc = $text] $variant, )+
+            $( #[doc = $text] $variant, )+
         }
 
         impl Code {
