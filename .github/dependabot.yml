@@ -1,0 +1,40 @@
+# Dependabot keeps the pins current: the commit SHAs in .github/workflows and the crate versions
+# in Cargo.toml and Cargo.lock.
+#
+# Weekly, and grouped so a quiet week is one pull request per ecosystem. A group holds minor and
+# patch updates only. A major update is a breaking change, and it arrives on its own.
+#
+# The 14-day cooldown lets a compromised release be caught before it reaches this repository.
+# Security updates are not delayed by it.
+version: 2
+
+updates:
+  - package-ecosystem: github-actions
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    cooldown:
+      default-days: 14
+    commit-message:
+      prefix: "chore(actions)"
+    groups:
+      actions:
+        patterns: ["*"]
+        update-types: [minor, patch]
+
+  - package-ecosystem: cargo
+    directory: /
+    schedule:
+      interval: weekly
+      day: monday
+    open-pull-requests-limit: 5
+    cooldown:
+      default-days: 14
+    commit-message:
+      prefix: "chore(deps)"
+    groups:
+      cargo:
+        patterns: ["*"]
+        update-types: [minor, patch]

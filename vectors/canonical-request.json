@@ -1,0 +1,2216 @@
+{
+  "schema": 1,
+  "requests": [
+    {
+      "name": "get-no-body",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://api.example.com/v1/items?limit=10&cursor=b%2Fc",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "canonical": "{\"actor\":\"user:0192f0c0-4444-7000-8000-000000000004\",\"body_sha256\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\"connection\":\"0192f0c0-3333-7000-8000-000000000003\",\"exp\":1893456000,\"headers_sha256\":\"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\",\"method\":\"GET\",\"nonce\":\"AAECAwQFBgcICQoLDA0ODw\",\"org\":\"0192f0c0-1111-7000-8000-000000000001\",\"project\":\"0192f0c0-2222-7000-8000-000000000002\",\"run\":null,\"url\":\"https://api.example.com/v1/items?limit=10&cursor=b%2Fc\",\"v\":1}",
+      "sha256": "f5b1ae4c84bb5055da6ccbdf15dd93c01371160d4fac1126f03fd7091641eb2f"
+    },
+    {
+      "name": "post-json",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "POST",
+        "url": "https://api.example.com/v1/items",
+        "headers_sha256": "25572d29a73b58b7507b5897df09d793033532b11e6e0dffdecc86c1cf9602e4",
+        "body_sha256": "16141e69cc05e630b1676836efcfcf5c3603628d3d22dd88156a47820b28b102",
+        "actor": "agent:0192f0c0-5555-7000-8000-000000000005",
+        "run": "0192f0c0-6666-7000-8000-000000000006",
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "canonical": "{\"actor\":\"agent:0192f0c0-5555-7000-8000-000000000005\",\"body_sha256\":\"16141e69cc05e630b1676836efcfcf5c3603628d3d22dd88156a47820b28b102\",\"connection\":\"0192f0c0-3333-7000-8000-000000000003\",\"exp\":1893456000,\"headers_sha256\":\"25572d29a73b58b7507b5897df09d793033532b11e6e0dffdecc86c1cf9602e4\",\"method\":\"POST\",\"nonce\":\"AAECAwQFBgcICQoLDA0ODw\",\"org\":\"0192f0c0-1111-7000-8000-000000000001\",\"project\":\"0192f0c0-2222-7000-8000-000000000002\",\"run\":\"0192f0c0-6666-7000-8000-000000000006\",\"url\":\"https://api.example.com/v1/items\",\"v\":1}",
+      "sha256": "425a66d716eba51e10228d99cc67b4a748145dcf505deef5c38c565651979692"
+    },
+    {
+      "name": "unicode-header-value",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "PUT",
+        "url": "https://api.example.com/v1/notes/1",
+        "headers_sha256": "11ad82d25598e90492c9ddf99965fd0d49e165beb250c92a2dc1b14cd63e538c",
+        "body_sha256": "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "canonical": "{\"actor\":\"user:0192f0c0-4444-7000-8000-000000000004\",\"body_sha256\":\"2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df\",\"connection\":\"0192f0c0-3333-7000-8000-000000000003\",\"exp\":1893456000,\"headers_sha256\":\"11ad82d25598e90492c9ddf99965fd0d49e165beb250c92a2dc1b14cd63e538c\",\"method\":\"PUT\",\"nonce\":\"AAECAwQFBgcICQoLDA0ODw\",\"org\":\"0192f0c0-1111-7000-8000-000000000001\",\"project\":\"0192f0c0-2222-7000-8000-000000000002\",\"run\":null,\"url\":\"https://api.example.com/v1/notes/1\",\"v\":1}",
+      "sha256": "759cf36822fc80e1b1a794824431e51064dcbd983eecaf1b50cd1502fc8a5df7"
+    },
+    {
+      "name": "ipv6-host",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://[2001:db8::1]:8443/status",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "canonical": "{\"actor\":\"user:0192f0c0-4444-7000-8000-000000000004\",\"body_sha256\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\"connection\":\"0192f0c0-3333-7000-8000-000000000003\",\"exp\":1893456000,\"headers_sha256\":\"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\",\"method\":\"GET\",\"nonce\":\"AAECAwQFBgcICQoLDA0ODw\",\"org\":\"0192f0c0-1111-7000-8000-000000000001\",\"project\":\"0192f0c0-2222-7000-8000-000000000002\",\"run\":null,\"url\":\"https://[2001:db8::1]:8443/status\",\"v\":1}",
+      "sha256": "9ff4825fea646c63161c59c38f673d3475c7a16549f2d0c0d9749a0883340ff7"
+    },
+    {
+      "name": "ipv4-host",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://192.0.2.10/status",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "canonical": "{\"actor\":\"user:0192f0c0-4444-7000-8000-000000000004\",\"body_sha256\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\"connection\":\"0192f0c0-3333-7000-8000-000000000003\",\"exp\":1893456000,\"headers_sha256\":\"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\",\"method\":\"GET\",\"nonce\":\"AAECAwQFBgcICQoLDA0ODw\",\"org\":\"0192f0c0-1111-7000-8000-000000000001\",\"project\":\"0192f0c0-2222-7000-8000-000000000002\",\"run\":null,\"url\":\"https://192.0.2.10/status\",\"v\":1}",
+      "sha256": "08ec0ec7a7a3157aa9a507869fe67522d3f524d03164263c9036135dcf94521b"
+    },
+    {
+      "name": "punycode-host",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://xn--bcher-kva.example/katalog",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "canonical": "{\"actor\":\"user:0192f0c0-4444-7000-8000-000000000004\",\"body_sha256\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\"connection\":\"0192f0c0-3333-7000-8000-000000000003\",\"exp\":1893456000,\"headers_sha256\":\"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\",\"method\":\"GET\",\"nonce\":\"AAECAwQFBgcICQoLDA0ODw\",\"org\":\"0192f0c0-1111-7000-8000-000000000001\",\"project\":\"0192f0c0-2222-7000-8000-000000000002\",\"run\":null,\"url\":\"https://xn--bcher-kva.example/katalog\",\"v\":1}",
+      "sha256": "e9be27469053dfe840f59d9268a4fc696da35e3bef6e0ac1bf6c8a586d31ff9d"
+    },
+    {
+      "name": "max-length-url",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://api.example.com/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "canonical": "{\"actor\":\"user:0192f0c0-4444-7000-8000-000000000004\",\"body_sha256\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\"connection\":\"0192f0c0-3333-7000-8000-000000000003\",\"exp\":1893456000,\"headers_sha256\":\"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\",\"method\":\"GET\",\"nonce\":\"AAECAwQFBgcICQoLDA0ODw\",\"org\":\"0192f0c0-1111-7000-8000-000000000001\",\"project\":\"0192f0c0-2222-7000-8000-000000000002\",\"run\":null,\"url\":\"https://api.example.com/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa\",\"v\":1}",
+      "sha256": "b04e4b051e477aa3aa2a8bc6ac40d2d199956541c371629fd19d96930f1f448c"
+    },
+    {
+      "name": "query-kept-byte-for-byte",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "DELETE",
+        "url": "https://api.example.com/v1/items?b=2&a=1&a=%C3%A9&empty=&",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "canonical": "{\"actor\":\"user:0192f0c0-4444-7000-8000-000000000004\",\"body_sha256\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\"connection\":\"0192f0c0-3333-7000-8000-000000000003\",\"exp\":1893456000,\"headers_sha256\":\"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\",\"method\":\"DELETE\",\"nonce\":\"AAECAwQFBgcICQoLDA0ODw\",\"org\":\"0192f0c0-1111-7000-8000-000000000001\",\"project\":\"0192f0c0-2222-7000-8000-000000000002\",\"run\":null,\"url\":\"https://api.example.com/v1/items?b=2&a=1&a=%C3%A9&empty=&\",\"v\":1}",
+      "sha256": "08bcba33af0b8f1065dda839c7b9a681898fc59a2413e01a4903acea6eafa589"
+    },
+    {
+      "name": "sql-no-parameters",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "SQL",
+        "url": "postgres://db.example.com:5432/app",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "ad5daa72b175f05d6fb8bdc3c94a6c894c470271acd3b9f0dd684c8ac56fafa7",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "canonical": "{\"actor\":\"user:0192f0c0-4444-7000-8000-000000000004\",\"body_sha256\":\"ad5daa72b175f05d6fb8bdc3c94a6c894c470271acd3b9f0dd684c8ac56fafa7\",\"connection\":\"0192f0c0-3333-7000-8000-000000000003\",\"exp\":1893456000,\"headers_sha256\":\"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\",\"method\":\"SQL\",\"nonce\":\"AAECAwQFBgcICQoLDA0ODw\",\"org\":\"0192f0c0-1111-7000-8000-000000000001\",\"project\":\"0192f0c0-2222-7000-8000-000000000002\",\"run\":null,\"url\":\"postgres://db.example.com:5432/app\",\"v\":1}",
+      "sha256": "ce0ad413e1a7a1c91ab5f82b4d96d4d490f49f204a57a44640a18eb36f8e9e0f"
+    },
+    {
+      "name": "sql-every-parameter-type",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "SQL",
+        "url": "mysql://db.example.com:3306/shop_eu",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "4cdcc2a9436cbaca77727a88220e661ab7ec861348c46d1c06c5d2e192a2842c",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "canonical": "{\"actor\":\"user:0192f0c0-4444-7000-8000-000000000004\",\"body_sha256\":\"4cdcc2a9436cbaca77727a88220e661ab7ec861348c46d1c06c5d2e192a2842c\",\"connection\":\"0192f0c0-3333-7000-8000-000000000003\",\"exp\":1893456000,\"headers_sha256\":\"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\",\"method\":\"SQL\",\"nonce\":\"AAECAwQFBgcICQoLDA0ODw\",\"org\":\"0192f0c0-1111-7000-8000-000000000001\",\"project\":\"0192f0c0-2222-7000-8000-000000000002\",\"run\":null,\"url\":\"mysql://db.example.com:3306/shop_eu\",\"v\":1}",
+      "sha256": "ca55118197befbec549d574f6bda9ac26361e32031a6f5d90c0d9f010f86cd36"
+    },
+    {
+      "name": "headers-mixed-case-names",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "POST",
+        "url": "https://api.example.com/v1/items",
+        "headers_sha256": "1649e461ee4c948232c23d0eb6dd9b3a3738bfa66e66906d2bdd56d3a99fa513",
+        "body_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "canonical": "{\"actor\":\"user:0192f0c0-4444-7000-8000-000000000004\",\"body_sha256\":\"44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a\",\"connection\":\"0192f0c0-3333-7000-8000-000000000003\",\"exp\":1893456000,\"headers_sha256\":\"1649e461ee4c948232c23d0eb6dd9b3a3738bfa66e66906d2bdd56d3a99fa513\",\"method\":\"POST\",\"nonce\":\"AAECAwQFBgcICQoLDA0ODw\",\"org\":\"0192f0c0-1111-7000-8000-000000000001\",\"project\":\"0192f0c0-2222-7000-8000-000000000002\",\"run\":null,\"url\":\"https://api.example.com/v1/items\",\"v\":1}",
+      "sha256": "fdae3b7b359bb29bb63b4606acaeda5708cfd35464766772270fbff7b143da8a"
+    },
+    {
+      "name": "headers-lower-case-names",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "POST",
+        "url": "https://api.example.com/v1/items",
+        "headers_sha256": "1649e461ee4c948232c23d0eb6dd9b3a3738bfa66e66906d2bdd56d3a99fa513",
+        "body_sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "canonical": "{\"actor\":\"user:0192f0c0-4444-7000-8000-000000000004\",\"body_sha256\":\"44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a\",\"connection\":\"0192f0c0-3333-7000-8000-000000000003\",\"exp\":1893456000,\"headers_sha256\":\"1649e461ee4c948232c23d0eb6dd9b3a3738bfa66e66906d2bdd56d3a99fa513\",\"method\":\"POST\",\"nonce\":\"AAECAwQFBgcICQoLDA0ODw\",\"org\":\"0192f0c0-1111-7000-8000-000000000001\",\"project\":\"0192f0c0-2222-7000-8000-000000000002\",\"run\":null,\"url\":\"https://api.example.com/v1/items\",\"v\":1}",
+      "sha256": "fdae3b7b359bb29bb63b4606acaeda5708cfd35464766772270fbff7b143da8a"
+    },
+    {
+      "name": "headers-repeated-name-first-order",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://api.example.com/v1/items",
+        "headers_sha256": "fd9451d10f197f839890771e881024f16697a01bbb2e000ba86551e774a1e5a9",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "canonical": "{\"actor\":\"user:0192f0c0-4444-7000-8000-000000000004\",\"body_sha256\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\"connection\":\"0192f0c0-3333-7000-8000-000000000003\",\"exp\":1893456000,\"headers_sha256\":\"fd9451d10f197f839890771e881024f16697a01bbb2e000ba86551e774a1e5a9\",\"method\":\"GET\",\"nonce\":\"AAECAwQFBgcICQoLDA0ODw\",\"org\":\"0192f0c0-1111-7000-8000-000000000001\",\"project\":\"0192f0c0-2222-7000-8000-000000000002\",\"run\":null,\"url\":\"https://api.example.com/v1/items\",\"v\":1}",
+      "sha256": "ae5c315d25cd133e5b5814a95aff519d4cd26f6f5ad0489c9e07e160255947f7"
+    },
+    {
+      "name": "headers-repeated-name-second-order",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://api.example.com/v1/items",
+        "headers_sha256": "448dee4d53170e05c805ae1216ad1413d1b4526553a2a8a5372023be269dc9bc",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "canonical": "{\"actor\":\"user:0192f0c0-4444-7000-8000-000000000004\",\"body_sha256\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\"connection\":\"0192f0c0-3333-7000-8000-000000000003\",\"exp\":1893456000,\"headers_sha256\":\"448dee4d53170e05c805ae1216ad1413d1b4526553a2a8a5372023be269dc9bc\",\"method\":\"GET\",\"nonce\":\"AAECAwQFBgcICQoLDA0ODw\",\"org\":\"0192f0c0-1111-7000-8000-000000000001\",\"project\":\"0192f0c0-2222-7000-8000-000000000002\",\"run\":null,\"url\":\"https://api.example.com/v1/items\",\"v\":1}",
+      "sha256": "415bb79e063a9a1909a9852e30efbaef96c070cbadfe0d80b1bfa3f3ba4ca114"
+    },
+    {
+      "name": "headers-different-names-first-order",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://api.example.com/v1/items",
+        "headers_sha256": "b15d0ff50c6584c23270b978af0f9c948e261b5cd2ac14ba227615d56de2a419",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "canonical": "{\"actor\":\"user:0192f0c0-4444-7000-8000-000000000004\",\"body_sha256\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\"connection\":\"0192f0c0-3333-7000-8000-000000000003\",\"exp\":1893456000,\"headers_sha256\":\"b15d0ff50c6584c23270b978af0f9c948e261b5cd2ac14ba227615d56de2a419\",\"method\":\"GET\",\"nonce\":\"AAECAwQFBgcICQoLDA0ODw\",\"org\":\"0192f0c0-1111-7000-8000-000000000001\",\"project\":\"0192f0c0-2222-7000-8000-000000000002\",\"run\":null,\"url\":\"https://api.example.com/v1/items\",\"v\":1}",
+      "sha256": "0474912d1d2ce43d5b3e8c88bff408654b4edc870451befd490aeb748a85e4e7"
+    },
+    {
+      "name": "headers-different-names-second-order",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://api.example.com/v1/items",
+        "headers_sha256": "b15d0ff50c6584c23270b978af0f9c948e261b5cd2ac14ba227615d56de2a419",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "canonical": "{\"actor\":\"user:0192f0c0-4444-7000-8000-000000000004\",\"body_sha256\":\"e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855\",\"connection\":\"0192f0c0-3333-7000-8000-000000000003\",\"exp\":1893456000,\"headers_sha256\":\"b15d0ff50c6584c23270b978af0f9c948e261b5cd2ac14ba227615d56de2a419\",\"method\":\"GET\",\"nonce\":\"AAECAwQFBgcICQoLDA0ODw\",\"org\":\"0192f0c0-1111-7000-8000-000000000001\",\"project\":\"0192f0c0-2222-7000-8000-000000000002\",\"run\":null,\"url\":\"https://api.example.com/v1/items\",\"v\":1}",
+      "sha256": "0474912d1d2ce43d5b3e8c88bff408654b4edc870451befd490aeb748a85e4e7"
+    },
+    {
+      "name": "mcp-integers",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "MCP",
+        "url": "mcp+https://mcp.example.com/mcp#create_issue",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "3c5895a777517774cfd4320751dfc97335806aefb7ca4259a867414acd9006c6",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "canonical": "{\"actor\":\"user:0192f0c0-4444-7000-8000-000000000004\",\"body_sha256\":\"3c5895a777517774cfd4320751dfc97335806aefb7ca4259a867414acd9006c6\",\"connection\":\"0192f0c0-3333-7000-8000-000000000003\",\"exp\":1893456000,\"headers_sha256\":\"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\",\"method\":\"MCP\",\"nonce\":\"AAECAwQFBgcICQoLDA0ODw\",\"org\":\"0192f0c0-1111-7000-8000-000000000001\",\"project\":\"0192f0c0-2222-7000-8000-000000000002\",\"run\":null,\"url\":\"mcp+https://mcp.example.com/mcp#create_issue\",\"v\":1}",
+      "sha256": "1da21ebb025dfec1de75f78fdd5187568680ee160693eb96a310ce2884e06896"
+    },
+    {
+      "name": "mcp-numbers",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "MCP",
+        "url": "mcp+https://mcp.example.com:8443/mcp?v=1#math.sum",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "f0782003d857797f7acbca817a3718bfa10c397ac96715ba651726a2126ba3fd",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "canonical": "{\"actor\":\"user:0192f0c0-4444-7000-8000-000000000004\",\"body_sha256\":\"f0782003d857797f7acbca817a3718bfa10c397ac96715ba651726a2126ba3fd\",\"connection\":\"0192f0c0-3333-7000-8000-000000000003\",\"exp\":1893456000,\"headers_sha256\":\"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\",\"method\":\"MCP\",\"nonce\":\"AAECAwQFBgcICQoLDA0ODw\",\"org\":\"0192f0c0-1111-7000-8000-000000000001\",\"project\":\"0192f0c0-2222-7000-8000-000000000002\",\"run\":null,\"url\":\"mcp+https://mcp.example.com:8443/mcp?v=1#math.sum\",\"v\":1}",
+      "sha256": "2079f33543b6d3b6ceed2d75ad45762a549d7e11284b942c7fdfe7b677b34a34"
+    },
+    {
+      "name": "builtin-connection",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "builtin:board",
+        "method": "MCP",
+        "url": "mcp+https://buffmyagent.com/mcp#write_resource",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "3d42c14da429fcc7b004dd53c89ba9249d884b8204743ff8d16d018b6fd75a31",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "canonical": "{\"actor\":\"user:0192f0c0-4444-7000-8000-000000000004\",\"body_sha256\":\"3d42c14da429fcc7b004dd53c89ba9249d884b8204743ff8d16d018b6fd75a31\",\"connection\":\"builtin:board\",\"exp\":1893456000,\"headers_sha256\":\"4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945\",\"method\":\"MCP\",\"nonce\":\"AAECAwQFBgcICQoLDA0ODw\",\"org\":\"0192f0c0-1111-7000-8000-000000000001\",\"project\":\"0192f0c0-2222-7000-8000-000000000002\",\"run\":null,\"url\":\"mcp+https://buffmyagent.com/mcp#write_resource\",\"v\":1}",
+      "sha256": "a40d3bf66096d7c90152dcd60d0f6c442d40b7cf44d6700740251f5b9ca329f4"
+    },
+    {
+      "name": "run-null",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "PATCH",
+        "url": "https://api.example.com/v1/items/1",
+        "headers_sha256": "6301a31e5f5a2dad6db79a578e00b4eea186c75f786159caa2d7f306b7fa7204",
+        "body_sha256": "0fb24fa07a4a24da9a3ff773eac8e762f3fd262d6543983e7cd142dc45f70752",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "canonical": "{\"actor\":\"user:0192f0c0-4444-7000-8000-000000000004\",\"body_sha256\":\"0fb24fa07a4a24da9a3ff773eac8e762f3fd262d6543983e7cd142dc45f70752\",\"connection\":\"0192f0c0-3333-7000-8000-000000000003\",\"exp\":1893456000,\"headers_sha256\":\"6301a31e5f5a2dad6db79a578e00b4eea186c75f786159caa2d7f306b7fa7204\",\"method\":\"PATCH\",\"nonce\":\"AAECAwQFBgcICQoLDA0ODw\",\"org\":\"0192f0c0-1111-7000-8000-000000000001\",\"project\":\"0192f0c0-2222-7000-8000-000000000002\",\"run\":null,\"url\":\"https://api.example.com/v1/items/1\",\"v\":1}",
+      "sha256": "5e2f424b75dea43d7c20e418e8af2495645aca63f9153265b37f95b148206b25"
+    },
+    {
+      "name": "run-set",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "PATCH",
+        "url": "https://api.example.com/v1/items/1",
+        "headers_sha256": "6301a31e5f5a2dad6db79a578e00b4eea186c75f786159caa2d7f306b7fa7204",
+        "body_sha256": "0fb24fa07a4a24da9a3ff773eac8e762f3fd262d6543983e7cd142dc45f70752",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": "0192f0c0-6666-7000-8000-000000000006",
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "canonical": "{\"actor\":\"user:0192f0c0-4444-7000-8000-000000000004\",\"body_sha256\":\"0fb24fa07a4a24da9a3ff773eac8e762f3fd262d6543983e7cd142dc45f70752\",\"connection\":\"0192f0c0-3333-7000-8000-000000000003\",\"exp\":1893456000,\"headers_sha256\":\"6301a31e5f5a2dad6db79a578e00b4eea186c75f786159caa2d7f306b7fa7204\",\"method\":\"PATCH\",\"nonce\":\"AAECAwQFBgcICQoLDA0ODw\",\"org\":\"0192f0c0-1111-7000-8000-000000000001\",\"project\":\"0192f0c0-2222-7000-8000-000000000002\",\"run\":\"0192f0c0-6666-7000-8000-000000000006\",\"url\":\"https://api.example.com/v1/items/1\",\"v\":1}",
+      "sha256": "b536d0cab7c6d9045ee5fbb932f34cf25bd8237d1ce5ad0bf55790d73b03d04b"
+    }
+  ],
+  "digests": [
+    {
+      "name": "get-no-body.headers",
+      "kind": "headers",
+      "input": {
+        "headers": []
+      },
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "get-no-body.body",
+      "kind": "body",
+      "input": {
+        "utf8": ""
+      },
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "post-json.headers",
+      "kind": "headers",
+      "input": {
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ],
+          [
+            "idempotency-key",
+            "7f2c"
+          ]
+        ]
+      },
+      "sha256": "25572d29a73b58b7507b5897df09d793033532b11e6e0dffdecc86c1cf9602e4"
+    },
+    {
+      "name": "post-json.body",
+      "kind": "body",
+      "input": {
+        "utf8": "{\"name\":\"widget\",\"qty\":2}"
+      },
+      "sha256": "16141e69cc05e630b1676836efcfcf5c3603628d3d22dd88156a47820b28b102"
+    },
+    {
+      "name": "unicode-header-value.headers",
+      "kind": "headers",
+      "input": {
+        "headers": [
+          [
+            "x-note",
+            "café ☕ 東京 😀"
+          ]
+        ]
+      },
+      "sha256": "11ad82d25598e90492c9ddf99965fd0d49e165beb250c92a2dc1b14cd63e538c"
+    },
+    {
+      "name": "unicode-header-value.body",
+      "kind": "body",
+      "input": {
+        "utf8": "ok"
+      },
+      "sha256": "2689367b205c16ce32ed4200942b8b8b1e262dfc70d9bc9fbc77c49699a4f1df"
+    },
+    {
+      "name": "ipv6-host.headers",
+      "kind": "headers",
+      "input": {
+        "headers": []
+      },
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "ipv6-host.body",
+      "kind": "body",
+      "input": {
+        "utf8": ""
+      },
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "ipv4-host.headers",
+      "kind": "headers",
+      "input": {
+        "headers": []
+      },
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "ipv4-host.body",
+      "kind": "body",
+      "input": {
+        "utf8": ""
+      },
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "punycode-host.headers",
+      "kind": "headers",
+      "input": {
+        "headers": []
+      },
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "punycode-host.body",
+      "kind": "body",
+      "input": {
+        "utf8": ""
+      },
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "max-length-url.headers",
+      "kind": "headers",
+      "input": {
+        "headers": []
+      },
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "max-length-url.body",
+      "kind": "body",
+      "input": {
+        "utf8": ""
+      },
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "query-kept-byte-for-byte.headers",
+      "kind": "headers",
+      "input": {
+        "headers": []
+      },
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "query-kept-byte-for-byte.body",
+      "kind": "body",
+      "input": {
+        "utf8": ""
+      },
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "sql-no-parameters.headers",
+      "kind": "headers",
+      "input": {
+        "headers": []
+      },
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "sql-no-parameters.body",
+      "kind": "sql",
+      "input": {
+        "sql": "select count(*) from orders",
+        "params": []
+      },
+      "sha256": "ad5daa72b175f05d6fb8bdc3c94a6c894c470271acd3b9f0dd684c8ac56fafa7"
+    },
+    {
+      "name": "sql-every-parameter-type.headers",
+      "kind": "headers",
+      "input": {
+        "headers": []
+      },
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "sql-every-parameter-type.body",
+      "kind": "sql",
+      "input": {
+        "sql": "insert into t values ($1,$2,$3,$4,$5,$6,$7,$8,$9,$10)",
+        "params": [
+          {
+            "t": "null",
+            "v": null
+          },
+          {
+            "t": "bool",
+            "v": "true"
+          },
+          {
+            "t": "int8",
+            "v": "-9223372036854775808"
+          },
+          {
+            "t": "float8",
+            "v": "0.1"
+          },
+          {
+            "t": "numeric",
+            "v": "12345678901234567890.0123456789"
+          },
+          {
+            "t": "text",
+            "v": "línea\n\"dos\""
+          },
+          {
+            "t": "bytea",
+            "v": "AAEC_-8"
+          },
+          {
+            "t": "timestamptz",
+            "v": "2026-11-23T10:15:30.123456Z"
+          },
+          {
+            "t": "jsonb",
+            "v": "{\"a\":[1,2,{\"b\":null}],\"c\":\"é\"}"
+          },
+          {
+            "t": "text",
+            "v": null
+          }
+        ]
+      },
+      "sha256": "4cdcc2a9436cbaca77727a88220e661ab7ec861348c46d1c06c5d2e192a2842c"
+    },
+    {
+      "name": "headers-mixed-case-names.headers",
+      "kind": "headers",
+      "input": {
+        "headers": [
+          [
+            "Content-Type",
+            "application/json"
+          ],
+          [
+            "X-Trace-ID",
+            " abc\t"
+          ],
+          [
+            "Authorization",
+            "Bearer never-hashed"
+          ],
+          [
+            "User-Agent",
+            "never-hashed"
+          ],
+          [
+            "Proxy-Authorization",
+            "never-hashed"
+          ]
+        ]
+      },
+      "sha256": "1649e461ee4c948232c23d0eb6dd9b3a3738bfa66e66906d2bdd56d3a99fa513"
+    },
+    {
+      "name": "headers-mixed-case-names.body",
+      "kind": "body",
+      "input": {
+        "utf8": "{}"
+      },
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "name": "headers-lower-case-names.headers",
+      "kind": "headers",
+      "input": {
+        "headers": [
+          [
+            "content-type",
+            "application/json"
+          ],
+          [
+            "x-trace-id",
+            "abc"
+          ]
+        ]
+      },
+      "sha256": "1649e461ee4c948232c23d0eb6dd9b3a3738bfa66e66906d2bdd56d3a99fa513"
+    },
+    {
+      "name": "headers-lower-case-names.body",
+      "kind": "body",
+      "input": {
+        "utf8": "{}"
+      },
+      "sha256": "44136fa355b3678a1146ad16f7e8649e94fb4fc21fe77e8310c060f61caaff8a"
+    },
+    {
+      "name": "headers-repeated-name-first-order.headers",
+      "kind": "headers",
+      "input": {
+        "headers": [
+          [
+            "accept",
+            "text/html"
+          ],
+          [
+            "accept",
+            "application/json"
+          ]
+        ]
+      },
+      "sha256": "fd9451d10f197f839890771e881024f16697a01bbb2e000ba86551e774a1e5a9"
+    },
+    {
+      "name": "headers-repeated-name-first-order.body",
+      "kind": "body",
+      "input": {
+        "utf8": ""
+      },
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "headers-repeated-name-second-order.headers",
+      "kind": "headers",
+      "input": {
+        "headers": [
+          [
+            "accept",
+            "application/json"
+          ],
+          [
+            "accept",
+            "text/html"
+          ]
+        ]
+      },
+      "sha256": "448dee4d53170e05c805ae1216ad1413d1b4526553a2a8a5372023be269dc9bc"
+    },
+    {
+      "name": "headers-repeated-name-second-order.body",
+      "kind": "body",
+      "input": {
+        "utf8": ""
+      },
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "headers-different-names-first-order.headers",
+      "kind": "headers",
+      "input": {
+        "headers": [
+          [
+            "x-b",
+            "2"
+          ],
+          [
+            "accept",
+            "application/json"
+          ],
+          [
+            "x-a",
+            "1"
+          ]
+        ]
+      },
+      "sha256": "b15d0ff50c6584c23270b978af0f9c948e261b5cd2ac14ba227615d56de2a419"
+    },
+    {
+      "name": "headers-different-names-first-order.body",
+      "kind": "body",
+      "input": {
+        "utf8": ""
+      },
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "headers-different-names-second-order.headers",
+      "kind": "headers",
+      "input": {
+        "headers": [
+          [
+            "x-a",
+            "1"
+          ],
+          [
+            "x-b",
+            "2"
+          ],
+          [
+            "accept",
+            "application/json"
+          ]
+        ]
+      },
+      "sha256": "b15d0ff50c6584c23270b978af0f9c948e261b5cd2ac14ba227615d56de2a419"
+    },
+    {
+      "name": "headers-different-names-second-order.body",
+      "kind": "body",
+      "input": {
+        "utf8": ""
+      },
+      "sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855"
+    },
+    {
+      "name": "mcp-integers.headers",
+      "kind": "headers",
+      "input": {
+        "headers": []
+      },
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "mcp-integers.body",
+      "kind": "mcp",
+      "input": {
+        "arguments_json": "{\"title\":\"Fix login\",\"labels\":[\"bug\",\"p1\"],\"estimate\":3,\"draft\":false}"
+      },
+      "sha256": "3c5895a777517774cfd4320751dfc97335806aefb7ca4259a867414acd9006c6"
+    },
+    {
+      "name": "mcp-numbers.headers",
+      "kind": "headers",
+      "input": {
+        "headers": []
+      },
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "mcp-numbers.body",
+      "kind": "mcp",
+      "input": {
+        "arguments_json": "{ \"values\": [0.1, 1e-7, -0, 9007199254740991, -9007199254740991, 1E2, 4.50],\n  \"nested\": [[1, [2, [3]]], []], \"\\u20ac\": \"\\u000f\" }"
+      },
+      "sha256": "f0782003d857797f7acbca817a3718bfa10c397ac96715ba651726a2126ba3fd"
+    },
+    {
+      "name": "builtin-connection.headers",
+      "kind": "headers",
+      "input": {
+        "headers": []
+      },
+      "sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945"
+    },
+    {
+      "name": "builtin-connection.body",
+      "kind": "mcp",
+      "input": {
+        "arguments_json": "{\"ref\":\"acme/app\",\"kind\":\"card\",\"confirmed_by_user\":true}"
+      },
+      "sha256": "3d42c14da429fcc7b004dd53c89ba9249d884b8204743ff8d16d018b6fd75a31"
+    },
+    {
+      "name": "run-null.headers",
+      "kind": "headers",
+      "input": {
+        "headers": [
+          [
+            "content-type",
+            "application/merge-patch+json"
+          ]
+        ]
+      },
+      "sha256": "6301a31e5f5a2dad6db79a578e00b4eea186c75f786159caa2d7f306b7fa7204"
+    },
+    {
+      "name": "run-null.body",
+      "kind": "body",
+      "input": {
+        "utf8": "{\"qty\":3}"
+      },
+      "sha256": "0fb24fa07a4a24da9a3ff773eac8e762f3fd262d6543983e7cd142dc45f70752"
+    },
+    {
+      "name": "run-set.headers",
+      "kind": "headers",
+      "input": {
+        "headers": [
+          [
+            "content-type",
+            "application/merge-patch+json"
+          ]
+        ]
+      },
+      "sha256": "6301a31e5f5a2dad6db79a578e00b4eea186c75f786159caa2d7f306b7fa7204"
+    },
+    {
+      "name": "run-set.body",
+      "kind": "body",
+      "input": {
+        "utf8": "{\"qty\":3}"
+      },
+      "sha256": "0fb24fa07a4a24da9a3ff773eac8e762f3fd262d6543983e7cd142dc45f70752"
+    }
+  ],
+  "jcs_numbers": [
+    {
+      "source": "1e21",
+      "output": "1e+21"
+    },
+    {
+      "source": "0.000001",
+      "output": "0.000001"
+    },
+    {
+      "source": "1e-7",
+      "output": "1e-7"
+    },
+    {
+      "source": "-0",
+      "output": "0"
+    },
+    {
+      "source": "333333333.33333329",
+      "output": "333333333.3333333"
+    },
+    {
+      "source": "1E30",
+      "output": "1e+30"
+    },
+    {
+      "source": "4.50",
+      "output": "4.5"
+    },
+    {
+      "source": "2e-3",
+      "output": "0.002"
+    },
+    {
+      "source": "0.000000000000000000000000001",
+      "output": "1e-27"
+    },
+    {
+      "source": "9007199254740992",
+      "output": "9007199254740992"
+    },
+    {
+      "source": "1e+23",
+      "output": "1e+23"
+    },
+    {
+      "source": "9.999999999999997e22",
+      "output": "9.999999999999997e+22"
+    },
+    {
+      "source": "5e-324",
+      "output": "5e-324"
+    },
+    {
+      "source": "-1.7976931348623157e308",
+      "output": "-1.7976931348623157e+308"
+    }
+  ],
+  "rejects": [
+    {
+      "name": "extra-key",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://api.example.com/v1/items",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000,
+        "note": "hello"
+      },
+      "field": "note",
+      "reason": "unknown key"
+    },
+    {
+      "name": "missing-key",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://api.example.com/v1/items",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "run",
+      "reason": "missing key"
+    },
+    {
+      "name": "version-two",
+      "request": {
+        "v": 2,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://api.example.com/v1/items",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "v",
+      "reason": "version is not 1"
+    },
+    {
+      "name": "uppercase-uuid",
+      "request": {
+        "v": 1,
+        "org": "0192F0C0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://api.example.com/v1/items",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "org",
+      "reason": "not a lowercase UUID"
+    },
+    {
+      "name": "slug-instead-of-uuid",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "acme/app",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://api.example.com/v1/items",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "project",
+      "reason": "not a lowercase UUID"
+    },
+    {
+      "name": "lowercase-method",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "get",
+        "url": "https://api.example.com/v1/items",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "method",
+      "reason": "not 1 to 16 uppercase letters"
+    },
+    {
+      "name": "float-exp",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://api.example.com/v1/items",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000.5
+      },
+      "field": "exp",
+      "reason": "not an integer of Unix seconds above 0"
+    },
+    {
+      "name": "exp-zero",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://api.example.com/v1/items",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 0
+      },
+      "field": "exp",
+      "reason": "not an integer of Unix seconds above 0"
+    },
+    {
+      "name": "exp-as-text",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://api.example.com/v1/items",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": "1893456000"
+      },
+      "field": "exp",
+      "reason": "not an integer of Unix seconds above 0"
+    },
+    {
+      "name": "short-nonce",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://api.example.com/v1/items",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0OD",
+        "exp": 1893456000
+      },
+      "field": "nonce",
+      "reason": "not 22 characters of base64url"
+    },
+    {
+      "name": "nonce-with-padding",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://api.example.com/v1/items",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw==",
+        "exp": 1893456000
+      },
+      "field": "nonce",
+      "reason": "not 22 characters of base64url"
+    },
+    {
+      "name": "nonce-second-spelling",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://api.example.com/v1/items",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODx",
+        "exp": 1893456000
+      },
+      "field": "nonce",
+      "reason": "not 22 characters of base64url"
+    },
+    {
+      "name": "uppercase-hash",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://api.example.com/v1/items",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "E3B0C44298FC1C149AFBF4C8996FB92427AE41E4649B934CA495991B7852B855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "body_sha256",
+      "reason": "not 64 lowercase hex"
+    },
+    {
+      "name": "actor-without-kind",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://api.example.com/v1/items",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "actor",
+      "reason": "not user:<uuid> or agent:<uuid>"
+    },
+    {
+      "name": "run-as-empty-text",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://api.example.com/v1/items",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": "",
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "run",
+      "reason": "not a lowercase UUID or null"
+    },
+    {
+      "name": "uppercase-host",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://API.example.com/v1/items",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "url",
+      "reason": "uppercase host"
+    },
+    {
+      "name": "uppercase-scheme",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "HTTPS://api.example.com/v1/items",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "url",
+      "reason": "uppercase scheme"
+    },
+    {
+      "name": "http-scheme",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "http://api.example.com/v1/items",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "url",
+      "reason": "scheme is not https"
+    },
+    {
+      "name": "default-port",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://api.example.com:443/v1/items",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "url",
+      "reason": "default port"
+    },
+    {
+      "name": "port-with-leading-zero",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://api.example.com:08443/v1/items",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "url",
+      "reason": "port is not 1 to 65535 without zeros"
+    },
+    {
+      "name": "empty-port",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://api.example.com:/v1/items",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "url",
+      "reason": "port is not 1 to 65535 without zeros"
+    },
+    {
+      "name": "fragment",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://api.example.com/v1/items#top",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "url",
+      "reason": "fragment"
+    },
+    {
+      "name": "userinfo",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://user:pass@api.example.com/v1/items",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "url",
+      "reason": "userinfo"
+    },
+    {
+      "name": "trailing-dot-host",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://api.example.com./v1/items",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "url",
+      "reason": "host has a trailing dot"
+    },
+    {
+      "name": "no-path",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://api.example.com",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "url",
+      "reason": "path does not start with /"
+    },
+    {
+      "name": "dot-segment",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://api.example.com/v1/../admin",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "url",
+      "reason": "dot segment"
+    },
+    {
+      "name": "encoded-dot-segment",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://api.example.com/v1/%2E%2E/admin",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "url",
+      "reason": "encoded dot segment"
+    },
+    {
+      "name": "half-encoded-dot-segment",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://api.example.com/v1/.%2e/admin",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "url",
+      "reason": "encoded dot segment"
+    },
+    {
+      "name": "backslash",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://api.example.com/v1\\items",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "url",
+      "reason": "backslash"
+    },
+    {
+      "name": "lowercase-percent-escape",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://api.example.com/v1/caf%c3%a9",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "url",
+      "reason": "lowercase percent escape"
+    },
+    {
+      "name": "percent-without-hex",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://api.example.com/v1/100%",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "url",
+      "reason": "percent sign without two hex digits"
+    },
+    {
+      "name": "raw-space",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://api.example.com/v1/my items",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "url",
+      "reason": "not printable ASCII"
+    },
+    {
+      "name": "raw-control",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://api.example.com/v1/items\n",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "url",
+      "reason": "not printable ASCII"
+    },
+    {
+      "name": "non-ascii",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://api.example.com/v1/café",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "url",
+      "reason": "not printable ASCII"
+    },
+    {
+      "name": "unicode-host",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://bücher.example/katalog",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "url",
+      "reason": "not printable ASCII"
+    },
+    {
+      "name": "longer-than-8192-bytes",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://api.example.com/aaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaaa",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "url",
+      "reason": "longer than 8192 bytes"
+    },
+    {
+      "name": "ipv4-short-form",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://127.1/status",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "url",
+      "reason": "IPv4 host is not four decimal octets"
+    },
+    {
+      "name": "ipv4-hex-form",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://0x7f.0.0.1/status",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "url",
+      "reason": "IPv4 host is not four decimal octets"
+    },
+    {
+      "name": "ipv4-single-number",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://2130706433/status",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "url",
+      "reason": "IPv4 host is not four decimal octets"
+    },
+    {
+      "name": "ipv4-leading-zero",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://127.0.0.01/status",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "url",
+      "reason": "IPv4 host is not four decimal octets"
+    },
+    {
+      "name": "ipv6-uppercase",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://[2001:DB8::1]/status",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "url",
+      "reason": "IPv6 host is not lowercase hex groups"
+    },
+    {
+      "name": "ipv6-not-compressed",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://[2001:db8:0:0:0:0:0:1]/status",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "url",
+      "reason": "IPv6 host is not compressed per RFC 5952"
+    },
+    {
+      "name": "ipv6-leading-zeros",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://[2001:0db8::1]/status",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "url",
+      "reason": "IPv6 host is not compressed per RFC 5952"
+    },
+    {
+      "name": "ipv6-without-brackets",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "GET",
+        "url": "https://2001:db8::1/status",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "url",
+      "reason": "IPv6 host without brackets"
+    },
+    {
+      "name": "sql-url-with-user",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "SQL",
+        "url": "postgres://app@db.example.com:5432/app",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "url",
+      "reason": "userinfo"
+    },
+    {
+      "name": "sql-url-without-port",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "SQL",
+        "url": "postgres://db.example.com/app",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "url",
+      "reason": "port is missing"
+    },
+    {
+      "name": "sql-url-with-query",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "SQL",
+        "url": "postgres://db.example.com:5432/app?sslmode=disable",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "url",
+      "reason": "database name"
+    },
+    {
+      "name": "sql-url-other-scheme",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "SQL",
+        "url": "postgresql://db.example.com:5432/app",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "url",
+      "reason": "scheme is not postgres or mysql"
+    },
+    {
+      "name": "mcp-url-without-tool",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "MCP",
+        "url": "mcp+https://mcp.example.com/mcp",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "url",
+      "reason": "tool is missing"
+    },
+    {
+      "name": "mcp-url-plain-https",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "MCP",
+        "url": "https://mcp.example.com/mcp#create_issue",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "url",
+      "reason": "scheme is not mcp+https"
+    },
+    {
+      "name": "mcp-url-two-tools",
+      "request": {
+        "v": 1,
+        "org": "0192f0c0-1111-7000-8000-000000000001",
+        "project": "0192f0c0-2222-7000-8000-000000000002",
+        "connection": "0192f0c0-3333-7000-8000-000000000003",
+        "method": "MCP",
+        "url": "mcp+https://mcp.example.com/mcp#a#b",
+        "headers_sha256": "4f53cda18c2baa0c0354bb5f9a3ecbe5ed12ab4d8e11ba873c2f11161202b945",
+        "body_sha256": "e3b0c44298fc1c149afbf4c8996fb92427ae41e4649b934ca495991b7852b855",
+        "actor": "user:0192f0c0-4444-7000-8000-000000000004",
+        "run": null,
+        "nonce": "AAECAwQFBgcICQoLDA0ODw",
+        "exp": 1893456000
+      },
+      "field": "url",
+      "reason": "tool name"
+    },
+    {
+      "name": "mcp-number-9007199254740992",
+      "digest": {
+        "kind": "mcp",
+        "input": {
+          "arguments_json": "{\"n\":9007199254740992}"
+        }
+      },
+      "field": "arguments.n",
+      "reason": "number is out of the safe range"
+    },
+    {
+      "name": "mcp-number-9007199254740993",
+      "digest": {
+        "kind": "mcp",
+        "input": {
+          "arguments_json": "{\"n\":9007199254740993}"
+        }
+      },
+      "field": "arguments.n",
+      "reason": "number is out of the safe range"
+    },
+    {
+      "name": "mcp-number-minus-9007199254740992",
+      "digest": {
+        "kind": "mcp",
+        "input": {
+          "arguments_json": "{\"n\":-9007199254740992}"
+        }
+      },
+      "field": "arguments.n",
+      "reason": "number is out of the safe range"
+    },
+    {
+      "name": "mcp-number-1e21",
+      "digest": {
+        "kind": "mcp",
+        "input": {
+          "arguments_json": "{\"n\":[1e21]}"
+        }
+      },
+      "field": "arguments.n[0]",
+      "reason": "number is out of the safe range"
+    },
+    {
+      "name": "mcp-number-1e400",
+      "digest": {
+        "kind": "mcp",
+        "input": {
+          "arguments_json": "{\"n\":{\"deep\":1e400}}"
+        }
+      },
+      "field": "arguments.n.deep",
+      "reason": "number is out of the safe range"
+    },
+    {
+      "name": "lone-surrogate",
+      "digest": {
+        "kind": "mcp",
+        "input": {
+          "arguments_json": "{\"text\":\"\\ud83d\"}"
+        }
+      },
+      "field": "arguments.text",
+      "reason": "lone surrogate"
+    },
+    {
+      "name": "lone-surrogate-in-a-key",
+      "digest": {
+        "kind": "mcp",
+        "input": {
+          "arguments_json": "{\"\\ude00\":1}"
+        }
+      },
+      "field": "arguments",
+      "reason": "lone surrogate"
+    },
+    {
+      "name": "duplicate-key",
+      "digest": {
+        "kind": "mcp",
+        "input": {
+          "arguments_json": "{\"a\":1,\"a\":2}"
+        }
+      },
+      "field": "arguments",
+      "reason": "duplicate key at offset 10"
+    },
+    {
+      "name": "arguments-not-an-object",
+      "digest": {
+        "kind": "mcp",
+        "input": {
+          "arguments_json": "[1,2]"
+        }
+      },
+      "field": "arguments",
+      "reason": "MCP arguments are a JSON object"
+    },
+    {
+      "name": "arguments-trailing-text",
+      "digest": {
+        "kind": "mcp",
+        "input": {
+          "arguments_json": "{} {}"
+        }
+      },
+      "field": "arguments",
+      "reason": "text after the JSON value at offset 3"
+    },
+    {
+      "name": "header-name-not-a-token",
+      "digest": {
+        "kind": "headers",
+        "input": {
+          "headers": [
+            [
+              "x y",
+              "1"
+            ]
+          ]
+        }
+      },
+      "field": "headers",
+      "reason": "header name is not a token"
+    },
+    {
+      "name": "sql-empty-statement",
+      "digest": {
+        "kind": "sql",
+        "input": {
+          "sql": "",
+          "params": []
+        }
+      },
+      "field": "sql",
+      "reason": "the statement is a non-empty string"
+    },
+    {
+      "name": "sql-int8-as-float",
+      "digest": {
+        "kind": "sql",
+        "input": {
+          "sql": "select $1",
+          "params": [
+            {
+              "t": "int8",
+              "v": "1.0"
+            }
+          ]
+        }
+      },
+      "field": "params[0]",
+      "reason": "not the canonical spelling of int8"
+    },
+    {
+      "name": "sql-int8-out-of-range",
+      "digest": {
+        "kind": "sql",
+        "input": {
+          "sql": "select $1",
+          "params": [
+            {
+              "t": "int8",
+              "v": "9223372036854775808"
+            }
+          ]
+        }
+      },
+      "field": "params[0]",
+      "reason": "not the canonical spelling of int8"
+    },
+    {
+      "name": "sql-timestamptz-with-offset",
+      "digest": {
+        "kind": "sql",
+        "input": {
+          "sql": "select $1",
+          "params": [
+            {
+              "t": "timestamptz",
+              "v": "2026-11-23T10:15:30.123456+02:00"
+            }
+          ]
+        }
+      },
+      "field": "params[0]",
+      "reason": "not the canonical spelling of timestamptz"
+    },
+    {
+      "name": "sql-jsonb-not-canonical",
+      "digest": {
+        "kind": "sql",
+        "input": {
+          "sql": "select $1",
+          "params": [
+            {
+              "t": "jsonb",
+              "v": "{\"b\":1, \"a\":2}"
+            }
+          ]
+        }
+      },
+      "field": "params[0]",
+      "reason": "not the canonical spelling of jsonb"
+    },
+    {
+      "name": "sql-null-with-a-value",
+      "digest": {
+        "kind": "sql",
+        "input": {
+          "sql": "select $1",
+          "params": [
+            {
+              "t": "null",
+              "v": "x"
+            }
+          ]
+        }
+      },
+      "field": "params[0]",
+      "reason": "type null carries null"
+    }
+  ],
+  "signatures": [
+    {
+      "name": "valid-low-s",
+      "request_name": "post-json",
+      "public_key_x963": "BH1C3-yz27IaogcDGHBAfOgW4cGuq3Fr_Ze5HdV4unAfWyycUMaaJ-AffJdp2pHRKl4YDRiBolqeEr6hlOo8_9I",
+      "signature_der": "MEQCIAKJ3V6LXVn1diZPe0JPdwglS6Et-FxbmbK6TpXT9HvzAiBq70nj2-l9xkP67pXH10Wudh38NvNaBGksRI1LbMdTzA",
+      "valid": true
+    },
+    {
+      "name": "valid-high-s",
+      "request_name": "post-json",
+      "public_key_x963": "BH1C3-yz27IaogcDGHBAfOgW4cGuq3Fr_Ze5HdV4unAfWyycUMaaJ-AffJdp2pHRKl4YDRiBolqeEr6hlOo8_9I",
+      "signature_der": "MEUCIAKJ3V6LXVn1diZPe0JPdwglS6Et-FxbmbK6TpXT9HvzAiEAlRC2GyQWgjq8BRFqOCi6UUbI_nazvZobx3U9d4-b0YU",
+      "valid": true
+    },
+    {
+      "name": "one-flipped-bit",
+      "request_name": "post-json",
+      "public_key_x963": "BH1C3-yz27IaogcDGHBAfOgW4cGuq3Fr_Ze5HdV4unAfWyycUMaaJ-AffJdp2pHRKl4YDRiBolqeEr6hlOo8_9I",
+      "signature_der": "MEQCIAKJ3V6LXVn1diZPe0JPdwglS6Et-FxbmbK6TpXT9HvzAiBq70nj2-l9xkP67pXH10Wudh38NvNaBGksRI1LbMdTzQ",
+      "valid": false
+    },
+    {
+      "name": "wrong-key",
+      "request_name": "post-json",
+      "public_key_x963": "BE6x9cq0fyHe0S-RllivPJtsWQ_0XDOLTMFZ0hNu6NP4L0vn-vRf2Nb2YcamWW7v17J0MjcjaIdC1WyldwqZVUU",
+      "signature_der": "MEQCIAKJ3V6LXVn1diZPe0JPdwglS6Et-FxbmbK6TpXT9HvzAiBq70nj2-l9xkP67pXH10Wudh38NvNaBGksRI1LbMdTzA",
+      "valid": false
+    },
+    {
+      "name": "signature-over-a-different-request",
+      "request_name": "get-no-body",
+      "public_key_x963": "BH1C3-yz27IaogcDGHBAfOgW4cGuq3Fr_Ze5HdV4unAfWyycUMaaJ-AffJdp2pHRKl4YDRiBolqeEr6hlOo8_9I",
+      "signature_der": "MEQCIAKJ3V6LXVn1diZPe0JPdwglS6Et-FxbmbK6TpXT9HvzAiBq70nj2-l9xkP67pXH10Wudh38NvNaBGksRI1LbMdTzA",
+      "valid": false
+    },
+    {
+      "name": "non-minimal-der",
+      "request_name": "post-json",
+      "public_key_x963": "BH1C3-yz27IaogcDGHBAfOgW4cGuq3Fr_Ze5HdV4unAfWyycUMaaJ-AffJdp2pHRKl4YDRiBolqeEr6hlOo8_9I",
+      "signature_der": "MEUCIQACid1ei11Z9XYmT3tCT3cIJUuhLfhcW5myuk6V0_R78wIgau9J49vpfcZD-u6Vx9dFrnYd_DbzWgRpLESNS2zHU8w",
+      "valid": false
+    },
+    {
+      "name": "zero-r",
+      "request_name": "post-json",
+      "public_key_x963": "BH1C3-yz27IaogcDGHBAfOgW4cGuq3Fr_Ze5HdV4unAfWyycUMaaJ-AffJdp2pHRKl4YDRiBolqeEr6hlOo8_9I",
+      "signature_der": "MCUCAQACIGrvSePb6X3GQ_rulcfXRa52Hfw281oEaSxEjUtsx1PM",
+      "valid": false
+    }
+  ],
+  "webauthn": [
+    {
+      "name": "first-nonce-first-user",
+      "request_name": "post-json",
+      "nonce": "AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8",
+      "user_id": "0192f0c0-4444-7000-8000-000000000004",
+      "challenge": "7WADqBfnbVb2L8YU3618CVj_nLS6xligmWVfUJFWl3E"
+    },
+    {
+      "name": "second-nonce-first-user",
+      "request_name": "post-json",
+      "nonce": "__79_Pv6-fj39vX08_Lx8O_u7ezr6uno5-bl5OPi4eA",
+      "user_id": "0192f0c0-4444-7000-8000-000000000004",
+      "challenge": "hd7-v6oJKEB289RucPvEEZbMYhe6dH-MDsYHfSM162Q"
+    },
+    {
+      "name": "first-nonce-second-user",
+      "request_name": "post-json",
+      "nonce": "AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8",
+      "user_id": "0192f0c0-5555-7000-8000-000000000005",
+      "challenge": "nb_NRS5Ill_kY_a7YZljmu0tciKhebrXCrKfIFtCU0g"
+    },
+    {
+      "name": "different-request-digest",
+      "request_name": "get-no-body",
+      "nonce": "AAECAwQFBgcICQoLDA0ODxAREhMUFRYXGBkaGxwdHh8",
+      "user_id": "0192f0c0-4444-7000-8000-000000000004",
+      "challenge": "AdrgEB6Dg9ygnYxzLhWzef93etWMDZgobwxJZLUF-fU"
+    }
+  ]
+}

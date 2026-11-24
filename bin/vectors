@@ -1,0 +1,72 @@
+#!/usr/bin/env bash
+# bin/vectors: the canonical request vectors, copied by hash.
+#
+# Every implementation of the canonical request must produce the same bytes, and the vectors file
+# is the contract. It is generated in the application repository and copied here unchanged. The
+# hash beside it is what makes a hand edit or a stale copy fail the gate.
+#
+#   bin/vectors --check             # the copy matches vectors/canonical-request.sha256
+#   bin/vectors <checkout>          # copy from a checkout of the application repository
+#   bin/vectors <https url>         # copy from a URL that serves the file
+#
+# Exit codes: 0 in sync or copied, 1 drift or a source that cannot be read, 2 usage.
+set -euo pipefail
+cd "$(dirname "$0")/.."
+. bin/lib.sh
+
+FILE=vectors/canonical-request.json
+HASH=vectors/canonical-request.sha256
+SOURCE_PATH=packages/domain/vectors/canonical-request.json
+
+usage() {
+  echo 'usage: bin/vectors --check | <checkout> | <https url>' >&2
+  exit 2
+}
+
+[ "$#" -eq 1 ] || usage
+
+if [ "$1" = --check ]; then
+  [ -f "$FILE" ] && [ -f "$HASH" ] || { echo "vectors: $FILE or $HASH is missing" >&2; exit 1; }
+  pinned="$(tr -d '[:space:]' < "$HASH")"
+  actual="$(sha256_of "$FILE")"
+  if [ "$pinned" != "$actual" ]; then
+    echo "vectors: $FILE does not match $HASH" >&2
+    echo "  pinned $pinned" >&2
+    echo "  actual $actual" >&2
+    echo '  The copy is never edited here. Copy it again: bin/vectors <checkout>' >&2
+    exit 1
+  fi
+  echo "vectors: in sync (sha256 $actual)"
+  exit 0
+fi
+
+case "$1" in
+  -*) usage ;;
+esac
+
+incoming="$(mktemp)"
+trap 'rm -f "$incoming"' EXIT
+case "$1" in
+  https://*)
+    command -v curl >/dev/null 2>&1 || unavailable 'curl is missing'
+    curl --fail --silent --show-error --location --proto '=https' --proto-redir '=https' --output "$incoming" -- "$1" \
+      || { echo 'vectors: the URL could not be fetched' >&2; exit 1; }
+    ;;
+  http://*)
+    echo 'vectors: https only' >&2
+    exit 1
+    ;;
+  *)
+    [ -f "$1/$SOURCE_PATH" ] || { echo "vectors: no $SOURCE_PATH under $1" >&2; exit 1; }
+    cp -- "$1/$SOURCE_PATH" "$incoming"
+    ;;
+esac
+
+# A file that is not the vectors (an error page, an empty file) is refused before it is pinned.
+grep -q '"schema"' "$incoming" && grep -q '"requests"' "$incoming" \
+  || { echo 'vectors: the source is not a vectors file' >&2; exit 1; }
+
+mkdir -p vectors
+cp -- "$incoming" "$FILE"
+sha256_of "$FILE" > "$HASH"
+echo "vectors: copied (sha256 $(cat "$HASH"))"

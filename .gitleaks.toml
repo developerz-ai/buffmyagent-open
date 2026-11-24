@@ -1,0 +1,31 @@
+# gitleaks: bin/secrets runs it, from the pre-push hook and from CI.
+title = "buffmyagent-open"
+
+[extend]
+# Every default rule: provider keys, private keys, tokens.
+useDefault = true
+
+# On top of them, long random-looking strings. A real secret rarely looks like a known provider's
+# key, and this repository has no reason to hold a random string in source: test fixtures use
+# plain words.
+#
+# What these two rules do not catch: lowercase hex. A 64-digit hex key cannot be told from a
+# SHA-256 digest, and digests are everywhere here. Review catches those, not this file.
+
+# Anywhere on a line. `/` is not in the class: with it every long file path is a candidate.
+[[rules]]
+id = "high-entropy-string"
+description = "A long high-entropy string"
+regex = '''[A-Za-z0-9+=_-]{32,}'''
+entropy = 4.5
+
+# With `/`, as in ordinary base64, but only as a value: after a quote, `=` or `:`.
+[[rules]]
+id = "high-entropy-value"
+description = "A long high-entropy value"
+regex = '''["'=:]\s*["']?([A-Za-z0-9+/_-]{32,}={0,2})'''
+entropy = 4.5
+
+[allowlist]
+description = "The copied vectors: public keys, signatures and digests made for publication"
+paths = ['''^vectors/canonical-request\.json$''']

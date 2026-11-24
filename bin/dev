@@ -1,0 +1,9 @@
+#!/usr/bin/env bash
+# bin/dev: the inner loop. No binary exists yet, so there is nothing to serve: this type-checks
+# every crate and every test. The slice that adds the sidecar makes this command start it.
+set -euo pipefail
+cd "$(dirname "$0")/.."
+. bin/lib.sh
+use_pinned_tools
+need cargo
+exec cargo check --workspace --all-targets --locked "$@"
