@@ -1,0 +1,36 @@
+#!/usr/bin/env bash
+# bin/setup: everything a fresh clone needs before bin/check. Safe to run again.
+#
+#   1. The Rust toolchain pinned in rust-toolchain.toml, through rustup.
+#   2. cargo-deny and gitleaks at the versions pinned in .mise.toml, through mise.
+#   3. The locked dependencies.
+#   4. The git hooks in .githooks/ (pre-push runs the secret scan).
+set -euo pipefail
+cd "$(dirname "$0")/.."
+. bin/lib.sh
+
+fail() {
+  printf 'setup: %s\n' "$1" >&2
+  exit 1
+}
+
+export PATH="$HOME/.cargo/bin:$PATH"
+command -v rustup >/dev/null 2>&1 || fail 'rustup is required: https://rustup.rs'
+command -v mise >/dev/null 2>&1 || fail 'mise is required: https://mise.jdx.dev'
+
+echo '→ Rust toolchain (rust-toolchain.toml)'
+rustup toolchain install --no-self-update >/dev/null || fail 'rustup could not install the pinned toolchain'
+
+echo '→ cargo-deny and gitleaks (.mise.toml)'
+mise trust --quiet .mise.toml
+mise install --quiet || fail 'mise install failed'
+use_pinned_tools
+need cargo cargo-deny gitleaks
+
+echo '→ locked dependencies'
+cargo fetch --locked >/dev/null || fail 'cargo fetch --locked failed: Cargo.lock and the manifests disagree, or the registry is unreachable'
+
+echo '→ git hooks'
+git config core.hooksPath .githooks
+
+echo '✓ setup complete: bin/check is the gate'

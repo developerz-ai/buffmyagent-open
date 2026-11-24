@@ -1,0 +1,7 @@
+[toolchain]
+# An exact version, never "stable". A floating channel lets a new release turn an unrelated pull
+# request red (new clippy lints under -D warnings) with no way to reproduce yesterday's green.
+# Bump it on purpose, in its own pull request.
+channel = "1.100.0"
+components = ["rustfmt", "clippy"]
+profile = "minimal"

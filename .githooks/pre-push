@@ -1,0 +1,17 @@
+#!/usr/bin/env bash
+# pre-push: the secret scan over every commit this push would publish. bin/setup activates it
+# (git config core.hooksPath .githooks). A push that cannot be scanned does not go out.
+set -euo pipefail
+cd "$(dirname "$0")/.."
+
+zero=0000000000000000000000000000000000000000
+while read -r _local_ref local_sha _remote_ref remote_sha; do
+  # A deleted ref publishes nothing.
+  [ "$local_sha" = "$zero" ] && continue
+  if [ "$remote_sha" = "$zero" ]; then
+    # A new ref: every commit no remote has yet.
+    bin/secrets "$local_sha" --not --remotes
+  else
+    bin/secrets "$remote_sha..$local_sha"
+  fi
+done

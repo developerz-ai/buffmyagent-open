@@ -1,0 +1,20 @@
+# gitleaks: bin/secrets runs it, from the pre-push hook and from CI.
+title = "buffmyagent-open"
+
+[extend]
+# Every default rule: provider keys, private keys, tokens.
+useDefault = true
+
+# On top of them, any long random-looking string. A real secret rarely looks like a known
+# provider's key, and this repository has no reason to hold a random string in source: test
+# fixtures use plain words, and digests are lowercase hex, which stays under this entropy.
+# `/` is not in the class: with it every long file path is a candidate, and a path is not a secret.
+[[rules]]
+id = "high-entropy-string"
+description = "A long high-entropy string"
+regex = '''[A-Za-z0-9+=_-]{32,}'''
+entropy = 4.5
+
+[allowlist]
+description = "The copied vectors: public keys, signatures and digests made for publication"
+paths = ['''^vectors/canonical-request\.json$''']

@@ -1,0 +1,12 @@
+#!/usr/bin/env bash
+# bin/test: the tests, every crate. Arguments go to cargo test:
+#
+#   bin/test                     # everything
+#   bin/test -p bma-types        # one crate
+#   bin/test --test codes        # one test file
+set -euo pipefail
+cd "$(dirname "$0")/.."
+. bin/lib.sh
+use_pinned_tools
+need cargo
+exec cargo test --workspace --locked "$@"

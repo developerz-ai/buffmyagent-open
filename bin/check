@@ -1,0 +1,29 @@
+#!/usr/bin/env bash
+# bin/check: the gate. The same command a person, an agent and CI run.
+#
+#   format     cargo fmt --check
+#   lints      cargo clippy, warnings are errors
+#   supply     cargo deny check: licenses, advisories, banned crates, sources
+#   tests      cargo test, every crate
+#   vectors    bin/vectors --check: the copied vectors still match their pinned hash
+#
+# Exit codes: 0 green, 75 the environment cannot run the gate (run bin/setup), anything else red.
+set -euo pipefail
+cd "$(dirname "$0")/.."
+. bin/lib.sh
+use_pinned_tools
+need cargo cargo-deny
+cargo fmt --version >/dev/null 2>&1 || unavailable 'rustfmt is missing: run bin/setup'
+cargo clippy --version >/dev/null 2>&1 || unavailable 'clippy is missing: run bin/setup'
+
+echo '→ format'
+cargo fmt --all -- --check
+echo '→ lints'
+cargo clippy --workspace --all-targets --locked -- -D warnings
+echo '→ supply chain'
+cargo deny check
+echo '→ tests'
+cargo test --workspace --locked
+echo '→ vectors'
+bin/vectors --check
+echo '✓ check passed'

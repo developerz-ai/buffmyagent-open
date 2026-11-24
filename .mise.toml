@@ -1,0 +1,6 @@
+# The tools bin/check needs that rustup does not carry. `bin/setup` installs them with
+# `mise install`, and CI installs the same versions from this file. Rust itself is pinned in
+# rust-toolchain.toml.
+[tools]
+cargo-deny = "0.22.0"
+gitleaks = "8.30.1"
