@@ -1,8 +1,9 @@
 //! Rules over the whole workspace that no single crate can check for itself.
 //!
-//! - No crate in the dependency graph is `reqwest`, `openssl` or `native-tls`: one HTTP client
-//!   (the broker's) and one TLS stack (rustls). `Cargo.lock` is the graph, with every optional and
-//!   platform-specific dependency in it.
+//! - No crate in the dependency graph is `reqwest`, `openssl`, `native-tls` or a reader of the
+//!   system certificate store: one HTTP client (the broker's) and one TLS stack (rustls with
+//!   bundled roots). `Cargo.lock` is the graph, with every optional and platform-specific
+//!   dependency in it.
 //! - No file under `crates/` is longer than 300 lines.
 //! - Every action a workflow uses is pinned by a full commit id. A tag or a branch can be moved to
 //!   new code after it was reviewed.
@@ -13,7 +14,14 @@
 use std::fs;
 use std::path::{Path, PathBuf};
 
-const BANNED: &[&str] = &["reqwest", "openssl", "openssl-sys", "native-tls"];
+const BANNED: &[&str] = &[
+    "reqwest",
+    "openssl",
+    "openssl-sys",
+    "native-tls",
+    "rustls-platform-verifier",
+    "rustls-native-certs",
+];
 const MAX_LINES: usize = 300;
 
 fn root() -> PathBuf {
@@ -75,47 +83,89 @@ fn too_long(dir: &Path, max: usize) -> Vec<(PathBuf, usize)> {
         .collect()
 }
 
-/// The `uses:` references in a workflow that are not `<owner>/<repo>[/path]@<40 hex digits>`.
-/// A local action (`./path`) is this repository's own code.
+/// True for `<owner>/<repo>[/path]@<40 lowercase hex digits>`.
+fn is_pinned(reference: &str) -> bool {
+    reference.rsplit_once('@').is_some_and(|(action, commit)| {
+        action.contains('/')
+            && commit.len() == 40
+            && commit
+                .bytes()
+                .all(|b| b.is_ascii_digit() || (b'a'..=b'f').contains(&b))
+    })
+}
+
+/// The action references in a workflow that are not pinned by a full commit id. A local action
+/// (`./path`) is this repository's own code.
+///
+/// A `uses` key is found wherever YAML lets a key start: at the start of a line, after the `-` of
+/// a list item, and inside a flow mapping after `{` or `,`. With or without quotes.
 fn unpinned_actions(workflow: &str) -> Vec<&str> {
-    workflow
+    let mut found = Vec::new();
+    for line in workflow
         .lines()
-        .filter_map(|line| {
-            let line = line.trim().trim_start_matches("- ").trim_start();
-            let reference = line.strip_prefix("uses:")?.split('#').next()?.trim();
-            let reference = reference.trim_matches(|quote| quote == '"' || quote == '\'');
-            let pinned = reference.rsplit_once('@').is_some_and(|(action, commit)| {
-                action.contains('/')
-                    && commit.len() == 40
-                    && commit
-                        .bytes()
-                        .all(|b| b.is_ascii_digit() || (b'a'..=b'f').contains(&b))
-            });
-            (!reference.starts_with("./") && !pinned).then_some(reference)
-        })
-        .collect()
+        .filter(|line| !line.trim_start().starts_with('#'))
+    {
+        let mut rest = line;
+        while let Some(at) = rest.find("uses") {
+            let before = rest[..at]
+                .trim_end()
+                .trim_end_matches(['"', '\''])
+                .trim_end();
+            let after = rest[at + 4..].trim_start_matches(['"', '\'']).trim_start();
+            rest = &rest[at + 4..];
+            let starts_a_key = before.is_empty() || before.ends_with(['-', '{', ',']);
+            let Some(value) = after.strip_prefix(':').filter(|_| starts_a_key) else {
+                continue;
+            };
+            let value = value.trim_start().trim_start_matches(['"', '\'']);
+            let end = value.find(|c: char| c.is_whitespace() || "\"',}]#".contains(c));
+            let reference = &value[..end.unwrap_or(value.len())];
+            if !reference.starts_with("./") && !is_pinned(reference) {
+                found.push(reference);
+            }
+        }
+    }
+    found
 }
 
 #[test]
 fn a_planted_unpinned_action_is_found() {
-    let workflow = "jobs:\n  a:\n    steps:\n      \
-        - uses: actions/checkout@3d3c42e5aac5ba805825da76410c181273ba90b1 # v7.0.1\n      \
+    let pin = "3d3c42e5aac5ba805825da76410c181273ba90b1";
+    let workflow = format!(
+        "jobs:\n  a:\n    steps:\n      \
+        - uses: actions/checkout@{pin} # v7.0.1\n      \
         - uses: actions/cache@v6\n      \
         - name: named\n        uses: \"owner/repo/path@main\"\n      \
         - uses: ./local/action\n      \
         - uses: owner/repo@3D3C42E5AAC5BA805825DA76410C181273BA90B1\n      \
         - uses: owner/repo@3d3c42e\n      \
         - uses: docker://alpine:3\n      \
-        - run: echo uses: nothing\n";
+        - {{ uses: flow/style@v1 }}\n      \
+        - {{ name: second key, uses: flow/second@v2, with: {{}} }}\n      \
+        - {{ \"uses\": 'flow/quoted@v3' }}\n      \
+        - {{ uses: flow/pinned@{pin} }}\n      \
+        - uses:\n      \
+        # - uses: commented/out@v9\n      \
+        - run: echo uses: nothing\n      \
+        - run: echo this step uses a tool\n"
+    );
     assert_eq!(
-        unpinned_actions(workflow),
+        unpinned_actions(&workflow),
         [
             "actions/cache@v6",
             "owner/repo/path@main",
             "owner/repo@3D3C42E5AAC5BA805825DA76410C181273BA90B1",
             "owner/repo@3d3c42e",
             "docker://alpine:3",
+            "flow/style@v1",
+            "flow/second@v2",
+            "flow/quoted@v3",
+            "",
         ]
+    );
+    assert_eq!(
+        unpinned_actions("steps: [{uses: a/b@v1}, {uses: c/d@v2}]"),
+        ["a/b@v1", "c/d@v2"]
     );
 }
 
@@ -139,6 +189,12 @@ fn a_planted_banned_crate_is_found() {
                 [[package]]\nname = \"openssl-sys\"\nversion = \"0.9.0\"\n\n\
                 [metadata]\nname = \"openssl\"\n";
     assert_eq!(banned_in(lock), ["reqwest", "native-tls", "openssl-sys"]);
+    for name in BANNED {
+        assert_eq!(
+            banned_in(&format!("[[package]]\nname = \"{name}\"\n")),
+            [*name]
+        );
+    }
     // A crate whose name only contains a banned one is a different crate.
     assert_eq!(
         banned_in("[[package]]\nname = \"reqwest-middleware-types\"\n"),

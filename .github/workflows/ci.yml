@@ -4,7 +4,7 @@ name: ci
 # release is built for, plus the secret scan over the commits.
 #
 #   check (<os>)   bin/check: format, clippy, cargo deny, tests, vectors hash
-#   secrets        bin/secrets: gitleaks over every commit reachable from this one
+#   secrets        bin/secrets: gitleaks over every commit of every ref that was fetched
 #   ci             the one verdict over the jobs above
 #
 # `ci` is a REQUIRED check and keeps that name: branch protection looks the verdict up by it.

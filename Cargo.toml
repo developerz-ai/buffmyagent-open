@@ -16,8 +16,8 @@ publish = false
 # crate asks for it.
 #
 # TLS is rustls with the aws-lc-rs provider and the bundled webpki roots: the same roots on every
-# system, no system store. `rustls-platform-verifier`, `native-tls` and `openssl` are refused by
-# deny.toml and by tests/workspace_policy.rs.
+# system, no system store. `rustls-platform-verifier`, `rustls-native-certs`, `native-tls`,
+# `openssl` and `reqwest` are refused by deny.toml and by tests/workspace_policy.rs.
 [workspace.dependencies]
 bma-types = { path = "crates/bma-types", version = "0.1.0" }
 

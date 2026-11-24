@@ -7,11 +7,14 @@ unavailable() {
 }
 
 # The tools mise installs for this repository win over whatever else is on PATH. In CI the mise
-# action has already put them there.
+# action has already put them there. A mise that cannot answer (config not trusted, tools not
+# installed) stops the script: the gate never runs on whatever version happens to be around.
 use_pinned_tools() {
   export PATH="$HOME/.cargo/bin:$PATH"
   if [ -z "${GITHUB_ACTIONS:-}" ] && command -v mise >/dev/null 2>&1; then
-    eval "$(mise env --shell bash)"
+    local pinned
+    pinned="$(mise env --shell bash 2>/dev/null)" || unavailable 'mise cannot load .mise.toml: run bin/setup'
+    eval "$pinned"
   fi
 }
 

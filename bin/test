@@ -1,12 +1,20 @@
 #!/usr/bin/env bash
-# bin/test: the tests, every crate. Arguments go to cargo test:
+# bin/test: the tests. Arguments go to cargo test:
 #
-#   bin/test                     # everything
+#   bin/test                     # every crate
 #   bin/test -p bma-types        # one crate
-#   bin/test --test codes        # one test file
+#   bin/test --test codes        # one test file, in every crate that has it
 set -euo pipefail
 cd "$(dirname "$0")/.."
 . bin/lib.sh
 use_pinned_tools
 need cargo
-exec cargo test --workspace --locked "$@"
+
+# Every crate, unless the arguments name one: cargo ignores -p when --workspace is given.
+scope=--workspace
+for arg in "$@"; do
+  case "$arg" in
+    -p | -p?* | --package | --package=*) scope= ;;
+  esac
+done
+exec cargo test ${scope:+"$scope"} --locked "$@"
